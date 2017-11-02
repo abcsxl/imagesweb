@@ -1,0 +1,18 @@
+﻿@model IEnumerable<imagesweb.Models.Image>
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>公司资质</h1>
+<hr />
+<div  class="container-wrap-right">
+    <ul class="clearfix" id="qualifications" style="width: 100%;">
+        @foreach (var item in Model)
+        {
+            <li style="list-style-type:none;width: 280px;background-color: #F5F5F5;border: 1px solid #E5E5E5; float: left; margin-right: 11px;margin-bottom: 15px;float: left">
+                <img style="width: 280px;height: 200px;" src="~/images/@item.Path" alt="@item.Description" />
+                <p style="padding:5px;height: 40px;line-height: 40px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size: 14px; text-align: center;">@item.Description</p>
+            </li>
+        }
+    </ul>
+</div>
